@@ -2,8 +2,10 @@ import { useTexture } from "@react-three/drei"
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from 'three'
+import imageUrl from '../assets/image.png'
+
 const Scene = () => {
-    let tex = useTexture("../public/image.png")
+    let tex = useTexture(imageUrl);
     let cyl = useRef(null);
     useFrame((state, delta) => {
         cyl.current.rotation.y += delta;
